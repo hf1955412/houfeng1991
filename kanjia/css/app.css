@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* 
+	作者：houfeng	
+	日期：2015-10-9
+	版本：1.0
+*/
+/* 框架 */
+.wrapper {max-width: 420px; width:100%; background: #f8f8f8; margin: 0 auto;overflow: hidden;background: #fff;position: relative;}
+/* 头部 */
+.headerWrap{width: 85px;display:block; background:#fcc238;line-height: 30px;border-top-right-radius: 50px;border-bottom-right-radius: 50px; color:#fff;font-size: 16px;padding-left: 10px;padding-bottom: 2px;margin: 20px 0;}
+/*logo*/
+.logoGrid {height: 23px;margin-top: 15px;}
+.logoGrid2 {height: 25px;margin-top: 15px;}
+/* 内容 */
+.bodyWrap{ width:100%; font-size:15px; color:#515151; position: relative;}
+.bodyWrapUlBox{ width:80%; margin:0 auto;}
+.bodyWrapUlBox li{ list-style-type:disc; color:#fcc238; width:100%; float:left;padding: 2% 0px; line-height:24px; font-size:15px; }
+.bodyWrapUlBox li p{ color:#515151;}
+.bodyWrapUlBox .appDownloadBox{display: inline-block; width:100%;padding: 4% 0px 2%;}
+.bodyWrapUlBox .appDownloadBox .appinputBox{ display:block;}
+.bodyWrapUlBox .appDownloadBox .appinputBox.appinputBoxImg{width: 37%;}
+.bodyWrapUlBox .appDownloadBox .appinputBox.appinputBoxZip{ width:55%;}
+.bodyWrapUlBox .appDownloadBox .appinputBox img{width: 100%; display:inline-block;border-radius: 5px;overflow: hidden;padding: 3%;background: #ededed;}
+.bodyWrapUlBox .appDownloadBox .appinputBox .and,.bodyWrapUlBox .appDownloadBox .appinputBox .ios{ display:block; padding:5% 0px; box-shadow:0px 3px 0 #128944; margin-top:8%; text-align:center; color:#fff; font-size:14px; cursor:pointer; background-size:10px; border-radius:5px;}
+.bodyWrapUlBox .appDownloadBox .appinputBox .and a,.bodyWrapUlBox .appDownloadBox .appinputBox .ios a{ display:block; color:#fff;}
+.bodyWrapUlBox .appDownloadBox .appinputBox .and{ background:#39ac69 url(../images/and.png) no-repeat bottom left; background-size:15%;}
+.bodyWrapUlBox .appDownloadBox .appinputBox .ios{ background:#39ac69 url(../images/ios.png) no-repeat bottom left; background-size:15%;}

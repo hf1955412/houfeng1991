@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* 
+	作者：houfeng	
+	日期：2015-10-9
+	版本：1.0
+*/
+/*重置css*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { background: transparent; border: 0; margin: 0; padding: 0; }
+*:focus {outline: none;}
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+ol, ul { list-style: none; }
+blockquote { quotes: none; }
+blockquote:before, blockquote:after { content: ''; content: none; }
+del { text-decoration: line-through; }
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+a img { border: none; outline: none; }
+a, a:link, a:visited { text-decoration: none; }
+/*整站字体*/
+body { font-family: "微软雅黑"; font-size: 14px; font-weight: normal; color: #333;}
+.title { font-size: 20px; font-family: "微软雅黑"; }
+/*整站布局*/
+.bodyWrap {max-width: 420px; margin: 0 auto; }
+/*对齐*/
+.floatL { float: left; }
+.floatR { float: right; }
+/*间距*/
+.mt5 { margin-top: 5px; }
+.mr10 { margin-right: 10px; }
+.ml10 { margin-left: 10px; }
+/* 清除浮动层 */
+.clear {clear: both;}
+/* 引导图 */
+#hfImg { display: none; position: fixed; top: 0px; z-index: 9999999; }
+/*页脚*/
+.footer { position: relative; background: #0086cb; padding: 9px 0 10px; }
+.footerTxtA, .footerTxtA a { color: #fff; font-size: 14px; }
+.footer:before, .ad-box:after { display: table; }
+.footer:after { clear: both; }
+.footer>nav { text-align: center; padding-bottom: 10px; }
+.footer>nav>a { display: inline-block; text-align: center; padding: 0 10px; margin-top: 10px; color: #fff; font: 15px/1 "微软雅黑"; border-left: 1px solid #fff; }
+.footer>nav>a:first-child { border-left: 0px; }
+.footer>p { text-align: center; padding: 0; color: #fff; font-size: 12px; line-height: 18px; font-family: "微软雅黑"; }

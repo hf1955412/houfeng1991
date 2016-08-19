@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* 
+	作者：houfeng	
+	日期：2015-10-9
+	版本：1.0
+*/
+/* 框架 */
+.wrapper {max-width: 420px; width:100%; margin: 0 auto; overflow: hidden; position: relative;}
+/* 头部 */
+.indexHeader {width: 100%;max-width: 420px;margin: 0 auto;position: relative; z-index:2;}
+.indexHeader img{ width: 100%; display: block;; }
+.blueBg{ background:#0373ad;}
+.whiteBg{ background:#e8e8e8;}
+/*logo*/
+.logoGrid {height: 23px;margin-top: 15px;}
+.logoGrid2 {height: 25px;margin-top: 15px;}
+/* 内容 */
+.bodyWrap{ width:100%; font-size:15px; color:#515151; position: relative;}
+.appDownBox{ padding: 3%; }
+.boxLeft{ float: left; width: 40%; }
+.boxLeft .appAnd{ width: 100%; }
+.boxLeft .wxgzhImg{ width: 100%; }
+.boxLeft .appAnd img,.boxLeft .wxgzhImg img{ width: 80%; display: block; margin: auto;}
+.boxLeft .wxgzhImg img{width: 77%; border: 3px solid #ccc; margin-top: 5%; }
+.boxRight{ float: right; width: 60%; }
+.boxRight img{ width: 100%; display: block; padding:23% 0; }
+/* 分割图 */
+.bgImg{ background: url("../images/bg.jpg"); background-size: 13px; }
+.bgImg img{ display: block; width: 12px; }
+/* 内容统一盒子 */
+.boxWrapN{ width: 100%;}
+.boxWrapN .titleH2{ display: block; position:relative; padding-top:5%;margin: 0% auto 8%;width: 90%;}
+.boxWrapN .titleH2 h2{width: 60%;margin: auto; padding: 10px;}
+.boxWrapN .titleH2 h2 img{display:block;width: 100%;}
+.boxWrapN .titleH2 p{ display:block; text-align:center; color:#808080; font-size:16px;}
+.boxWrapN .titleH2 .sqBox{ width:40%; text-align:center; border-radius:50px; margin:40px auto 0; color:#fff; background:#f8525c; padding:10px;}
+.boxWrapN .titleH2 .sqBox a{ color:#fff; display:block;}
+.sqBoxIos{ width:70%; margin:0px auto 20px; font-size:14px; color:#333;}
+.sqBoxIosColor{ color:#f00;}
+/* 蹭网步骤 */
+.boxWrapN .dlText{ width:80%; margin:0 auto;}
+.boxWrapN .dlText img{ width:100%; display:block;}
+/* banner */
+.banner{ display:block;}
+.banner img{ width:100%; display:block;}
+/* listBoxMore */
+.listBoxMore{ display:block;}
+.listBoxWrap{width: 81%; margin:0% auto; padding:5% 0;}
+.listBoxWrap p{font-size: 14px; line-height:22px; color:#aa812d;}
+.listBoxWrap p span.color1{ color:#ff7512;}
+.listBoxWrapSl{width: 81%; margin:0% auto; padding:5% 0;}
+.listBoxWrapSl p{font-size: 16px;line-height: 22px; color:#aa812d;}
+.listBoxWrapSl p span.color1{ color:#ff7512;border-bottom: 1px solid #FFA565;margin: 0 3px;}
+/* boxfxList参加 */
+.boxfxList{width: 81%; margin:auto; padding:0px 0px 6% 0px;}
+.boxfxList .fxBox,.boxfxList .cjBox{ width:45%; border-radius:5px; text-align:center; font-size:18px; display:block; line-height:35px; cursor:pointer; }
+.boxfxList .fxBox{ background:#fcc238; box-shadow:0px 5px 0px #d7a328; color:#7b6631; }
+.boxfxList .cjBox{ background:#39ac69; box-shadow:0px 5px 0px #1d8c4b; color:#ffffff; }
+.boxfxList p{margin: 5% auto 0 auto; display:block; font-size:14px; color:#5b544f;}
+.listBoxMore.border1{ border-bottom:1px solid #efe5a5;}
+/* 店链接 */
+.listBoxMore .tzBox{ display:block; background:#39ac69;width: 60%; margin:0 auto 6px; border-radius:50px; box-shadow:0px 5px 0px #239252;line-height: 40px; cursor:pointer; color:#fff; cursor:pointer;}
+.listBoxMore .tzBox a{ display:block; }
+.listBoxMore .tzBox p{ width:100%; text-align:center;font-size: 18px; color:#fff;display: inline-block;}
+.listBoxMore .tzBox p a{ color:#fff;}
+.listBoxMore .tzBox p span{width: 10%;display: inline-block; position:relative;line-height: 40px;min-height: 18px;}
+.listBoxMore .tzBox p span img{width: 26px; display:block; position:absolute;top: -1px;right: -10px;}
+.padding10px{ padding:15px 0;}
+/* 颜色 */
+.color2{ background:#fff7c1;}
+/* listBoxMoreUlBox */
+.listBoxMore.marginTop10px{ padding-top:6%;}
+.listBoxMore.marginBot10px{ padding-bottom:6%;}
+.listBoxMore .listBoxMoreUlBoxTitle{ width:80%; margin:auto; display:block; background:#eee; color:#515151; border-bottom:1px solid #dedede;}
+.listBoxMore .listBoxMoreUlBoxTitle li{ float:left; width:33.33%; display:block; text-align:center; line-height:35px; font-size:14px; }
+.listBoxMore .listBoxMoreUlBox{ display:block; width:100%;}
+.listBoxMore .listBoxMoreUlBox li{ width:80%; display:block; margin:auto; line-height:35px; font-size:12px;}
+.listBoxMore .listBoxMoreUlBox li span{ width:33.33%; display:block; text-align:center; float:left;}
+.listBoxMore .listBoxMoreUlBox li span.colorFont1{ color:#6da1ff;}
+.listBoxMore .listBoxMoreUlBox li span.colorFont2{ color:#515151;}
+.listBoxMore .listBoxMoreUlBox li span.colorFont3{ color:#ff7512;}
+.listBoxMore .bgBorder{ display:block;width: 84%;margin: auto;}
+.listBoxMore .bgBorder img{ display:block; width:100%;}
+.listBoxMore .listBoxMoreUlBox li:nth-of-type(odd){ background:#ffffff;}
+.listBoxMore .listBoxMoreUlBox li:nth-of-type(even){ background:#f2f2f2;}
+/*
+#list1 li:nth-of-type(odd){ background:#00ccff;}奇数行 
+#list1 li:nth-of-type(even){ background:#ffcc00;}偶数行
+*/

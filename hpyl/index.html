@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>评论赚流量，正在进行时</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no, initial-scale=1">
+<meta name="keywords" content="评论赚流量，正在进行时">
+<meta name="description" content="我刚给流量咪给了一个5星好评，获得了100流量币，快来围观！">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/index.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<!-- 清除页面缓存 -->
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">  
+<!-- 清除页面缓存 -->
+</head>
+<body>
+<!-- 加载动画 -->
+<img class="loading" src="images/loading.gif" width="50%">
+<div class="msg-mask" id="mask"></div>
+    <div id="wrap">
+        <div class="boxList">
+			<div style="display:none;" id="iconPicImgBox" class="iconPicImgBox"><img name="iconPicImgBox" src="images/iconPic.jpg" alt="图标"></div>
+			<!-- banner -->
+			<div class="banner">
+				<img src="images/banner.jpg" alt="好评有礼">
+				<span class="bannerSpanD"><a class="bannerSpanDLink" href="#" title="好评记录">好评记录</a></span>
+			</div>
+			<!-- list -->
+			<div class="listBoxDiv">
+				<ul>
+					<h2 class="titleH2"><img src="images/titleH2img1.png" alt="活动步骤">活动步骤</h2>
+					<li><span>1</span>在各应用市场，给流量咪5星好评</li>
+					<li><span>2</span>上传截图</li>
+					<li><span>3</span>等待审核，1~7个工作日内到账</li>
+				</ul>
+				<div class="clear"></div>
+				<ul>
+				2、
+
+					<h2 class="titleH2"><img src="images/titleH2img2.png" alt="活动步骤">活动规则</h2>
+					<li><span>1</span>每人只能好评一次，不能多次评价，不区分应用市场（仅针对从未提交过用户）</li>
+					<li><span>2</span><p>好评提交后，审核期间不能再提交，审核失败后可以重新提交，审核通过后将不能再提交</p></li>
+					<li><span>3</span><p>好评内容，10个字以内只奖励50流量币，超过10字奖励100流量币;</p></li>
+					<li><span>4</span><p>不是5星好评，不奖励;</p></li>
+					<li><span>5</span><p>截图一定要能说明是自己的评论，否则无法判断真实性将会被打回;</p></li>
+					<li><span>6</span><p>本活动与苹果公司无关;</p></li>
+				</ul>
+				<div class="clear"></div>
+				<ul>
+					<h2 class="titleH2"><img src="images/titleH2img3.png" alt="活动步骤">案例介绍</h2>
+				</ul>
+			</div>
+			<div class="nrPicimg"><img src="images/nrPicimg.jpg" alt="案例介绍"></div>
+			<!-- formInput -->
+			<form id="search" name="search" method="post" action="http://192.168.0.135:8080/webapi/userPositiveComment/upload.json">
+				<div class="searchBox">
+					<ul class="searchUl">
+						<input name="token" id="token" type="hidden" value="" autocomplete="off" />
+						<li><span>应用市场</span><input name="appstore" id="appstore" type="text" value="" autocomplete="off" placeholder="请输入应用市场名称" /><p>如小米、360、应用宝、App Store</p></li>
+						<li><span>评论人昵称</span><input name="nickname" id="nickname" type="text" value="" autocomplete="off" placeholder="请输入您在应用市场的昵称" /></li>
+						<li>
+							<span>上传截图</span>
+							<div class="imgbox">
+								<!--<input name="screenshot" class="fileImgBox" type="file" id="filesInputz" accept="image/*" >-->
+								<ul id="imageBoxz">
+									<li class="pList"><input type="hidden" name="screenshot" id="screenshot" value="" /></li>
+								</ul>
+								<label class="btn-file zheng" data-role="add">
+									<img class="upImg" src="images/upLoadImg.png" alt="">
+									<input style="display:none;" class="fileImgBox" type="file" id="filesInputz" accept="image/*" >
+								</label>
+								<div class="clear"></div>
+								<p class="appAndBox">该功能仅支持流量咪1.5.0以上版本,安卓操作系统4.4以上版本,请先升级！</p>
+							</div>
+							<div class="clear"></div>
+						</li>
+						
+						<li class="dwBoxDiv">
+							<input class="inputBoxDiv1" id="inputBoxDiv1" title="提交" type="button" value="提交" />
+							<input class="inputBoxDiv" index="" id="inputBoxDiv" title="提交" type="button" value="提交" />
+						</li>
+					</ul>
+				</div>
+			</form>
+        </div>
+    </div>
+</body>
+</html>

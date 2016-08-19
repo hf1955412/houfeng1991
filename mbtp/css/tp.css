@@ -1,0 +1,71 @@
+#wrap { max-width: 420px; margin: 0 auto; overflow: hidden; background: #4d56a3; position: relative; width: 100%; }
+.clear { clear: both; }
+.msg-mask { background: rgba(0, 0, 0, .5); height: 100%; left: 0; position: fixed; top: 0; width: 100%; z-index: 9; display: none; }
+/* 头部 */
+.indexHeaderBox { background: #32b476; width: 100%; height: 48px; line-height: 48px; padding: 2px 0; max-width: 420px; margin: 0 auto; position: relative; border-bottom: 2px solid #32b476; z-index: 2; }
+.indexHeaderBox a.poL { width: 15%; height: 53px; position: absolute; left: 0; top: 0; z-index: 9; text-align: center; }
+.indexHeaderBox a.poR { width: 14%; height: 54px; position: absolute; right: 0; top: 0; z-index: 9; text-align: center; }
+.indexTitle { text-align: center; color: #fff; position: relative; z-index: 0; cursor: pointer; font-size: 20px; font-family: "微软雅黑"; }
+.blueBg { background: #0373ad; }
+.logoGridBox { width: 14px; position: absolute; top: 14px; left: 20px; }
+/* banner */
+.banner img { width: 100%; display: block; }
+/* boxList */
+.boxList { display: block; padding: 0% 0 8%; }
+/* banner */
+.banner { display: block; }
+.banner img { display: block; width: 100%; }
+/* listBoxDiv */
+/* listBoxMore */
+.listBoxMore { display: block;padding: 0 2%; }
+.listBoxWrap { width: 81%; margin: 0% auto; padding: 5% 0; }
+.listBoxWrap p { font-size: 16px; line-height: 22px; color: #aa812d; }
+.listBoxWrap p span.color1 { color: #ff7512; }
+/* boxfxList参加 */
+.boxfxList { width: 81%; margin: auto; padding: 0px 0px 6% 0px; }
+.boxfxList .fxBox, .boxfxList .cjBox { width: 45%; border-radius: 5px; text-align: center; font-size: 18px; display: block; line-height: 35px; cursor: pointer; }
+.boxfxList .fxBox { background: #fcc238; box-shadow: 0px 5px 0px #d7a328; color: #7b6631; }
+.boxfxList .cjBox { background: #39ac69; box-shadow: 0px 5px 0px #1d8c4b; color: #ffffff; }
+.boxfxList .fxBox a { color: #7b6631; display: block; }
+.boxfxList .cjBox a { color: #ffffff; display: block; }
+.boxfxList p { margin: 5% auto 0 auto; display: block; font-size: 14px; color: #5b544f; }
+.listBoxMore.border1 { border-bottom: 1px solid #efe5a5; }
+/* 颜色 */
+.color2 { background: #fff7c1; }
+/* listBoxMoreUlBox */
+.listBoxMore.marginTop10px { padding-top: 6%; }
+.listBoxMore.marginBot10px { padding-bottom: 6%; }
+.listBoxMore .listBoxMoreUl{ display: block; position: relative; padding-top: 2%;}
+.listBoxMore .listBoxMoreUl li{ width: 41%; float: left; margin: 0% 0 5% 5%; z-index: 1; display: inline-block;}
+.listBoxMore .listBoxMoreUl li .porBoxList{ position: relative;}
+.listBoxMore .listBoxMoreUl li:nth-child(odd){ margin-right:2%;  }
+.listBoxMore .listBoxMoreUl li .txtBoxList{ position: relative; z-index: 9; border-radius: 10px;border: 2px solid #000;  }
+.listBoxMore .listBoxMoreUl li .imgPicPa{ position: absolute; right: -6px; bottom: -6px;}
+.listBoxMore .listBoxMoreUl li img{ width: 100%; display: block; border-top-right-radius: 10px;border-top-left-radius: 10px;}
+.listBoxMore .listBoxMoreUl li ul.listBoxMoreUlListBox{ display: block; padding: 2% 4%; border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;}
+.listBoxMore .listBoxMoreUl li ul.bgColorBoy{ background: #ffdd79;}
+.listBoxMore .listBoxMoreUl li ul.bgColorGirl{ background: #ff98bb;}
+.listBoxMore .listBoxMoreUl li ul.listBoxMoreUlListBox li{ width: 100%; display: block; padding: 1% 0px; border-radius: 0px;border: none; background: none;margin: 0px;}
+.listBoxMore .listBoxMoreUl li ul.listBoxMoreUlListBox li span{ font-size: 14px; color: #333; }
+.listBoxMore .listBoxMoreUl li ul.listBoxMoreUlListBox li span.colorOr{ color: #f84f7b; }
+.listBoxMore .listBoxMoreUl li ul.listBoxMoreUlListBox li span.colorBgNameBoy{ background: url(../images/spanBg.jpg) bottom no-repeat; background-size: 100% 6px; }
+.listBoxMore .listBoxMoreUl li ul.listBoxMoreUlListBox li span.colorBgNameGirl{ background: url(../images/spanBg1.jpg) bottom no-repeat; background-size: 100% 6px; }
+/* yun */
+.listBoxMoreUl .yunBoxImg{ width: 40px; display: block; position: absolute; top: 30%;z-index: 9;}
+.listBoxMoreUl .yunBoxImg1{ width: 40px; display: block; position: absolute; right: 0px;top: 18%;z-index: 10;}
+.listBoxMoreUl .yunBoxImg2{ width: 60px; display: block; position: absolute; right: -12px;top: 2%;}
+/* boxWrapN */
+.boxWrapN{ background: #fff url(../images/bg.png) bottom no-repeat; background-size:100% ; padding-bottom: 30%;}
+/* 上传投票 */
+.inputBox{ border: 2px solid #000; color: #000; font-size: 20px;  text-align: center;border-radius: 50px;display: block;width: 80%;margin: 18px auto;padding: 3px 0; cursor: pointer;}
+.inputBox.Upload{ background: #fdd92d; }
+.inputBox.noUpload{ background: #cecece; }
+/* fxBox */
+.fxBox{ display: block; margin: auto;  position: fixed;bottom: 5%;z-index: 9;left: 0px;width: 100%;}
+.fxBox img{ display: block; width: 50%; margin: auto; max-width: 200px; }
+/* jpOpen */
+.jpOpen{ display: block; text-align: right;padding-right: 4%;}
+.jpOpen img{ width: 110px;  }
+/* yindaoTu */
+.yindaoTu { position: fixed; width: 100%; left: 0px; z-index: 999; display: none; }
+.yindaoTu img{ width: 100%; }

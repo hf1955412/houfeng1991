@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*重置css*/
+*{ font-family: "微软雅黑";}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {background: transparent;border: 0;margin: 0;padding: 0;vertical-align: baseline;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal;margin: 0; padding: 0;}
+ol, ul {list-style: none;}
+blockquote {quotes: none;}
+blockquote:before, blockquote:after {content: '';content: none;}
+del {text-decoration: line-through;}
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-collapse: collapse;border-spacing: 0;}
+a img,a:focus,img:foucs {border: none;outline: none;}
+input {outline: none;}textarea {outline: none;}
+a, a:link, a:visited {text-decoration: none;}
+/*对齐*/
+.floatL {float: left;}
+.floatR {float: right;}
+.clear {clear: both;}
+.m{ flex:1;}
+/*整站字体*/
+body {font-family: "微软雅黑";font-size: 14px;font-weight: normal;color: #ff8989;background:#4d56a3; }
+.title {font-size: 20px;font-family: "微软雅黑";color: #286ea7;}

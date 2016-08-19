@@ -1,0 +1,54 @@
+#wrap { max-width: 420px; margin: 0 auto; overflow: hidden; background: #4d56a3; position: relative; width: 100%; }
+.clear { clear: both; }
+.msg-mask { display:none; background: rgba(0, 0, 0, .5); height: 100%; left: 0; position: fixed; top: 0; width: 100%;z-index: 999;}
+/* 加载gif */
+.loading { display:none; -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box; border-radius: 4px; left: 50%; margin-left: -25px; margin-top: -87px; position: fixed; top: 50%; width:50px;z-index: 9999;}
+/* 头部 */
+.indexHeaderBox { background: #32b476; width: 100%; height: 48px; line-height: 48px; padding: 2px 0; max-width: 420px; margin: 0 auto; position: relative; border-bottom: 2px solid #32b476; z-index: 2; }
+.indexHeaderBox a.poL { width: 15%; height: 53px; position: absolute; left: 0; top: 0; z-index: 9; text-align: center; }
+.indexHeaderBox a.poR { width: 14%; height: 54px; position: absolute; right: 0; top: 0; z-index: 9; text-align: center; }
+.indexTitle { text-align: center; color: #fff; position: relative; z-index: 0; cursor: pointer; font-size: 20px; font-family: "微软雅黑"; }
+.blueBg { background: #0373ad; }
+.logoGridBox { width: 14px; position: absolute; top: 14px; left: 20px; }
+/* banner */
+.banner img { width: 100%; display: block; }
+/* boxList */
+.boxList { display: block; padding: 0% 0 8%; }
+/* banner */
+.banner { display: block; position:relative; }
+.banner .bannerSpanD{ position:absolute;right: 2%;bottom: 3%;background: #2e2e4d;width: 81px;text-align: center;line-height: 24px;border-radius: 50px;font-size: 12px;}
+.banner .bannerSpanD a{ color:#fff;}
+.banner img { display: block; width: 100%; }
+/* listBoxDiv */
+.listBoxDiv { display: block; width: 84%; margin: auto; }
+.listBoxDiv ul { display: block; width: 100%; border-top: 1px dashed #3a3a60; padding: 15px 0; }
+.listBoxDiv ul:first-child { border-top: 0px; }
+.listBoxDiv ul h2.titleH2 { width: 100%; display: block; line-height: 28px; font-size: 16px; color: #ffd800; font-weight: bold; padding-bottom: 5px; }
+.listBoxDiv ul h2.titleH2 img { width: 46px; float: left; padding-right: 10px; }
+.listBoxDiv ul li { color: #fff; display: block; padding: 15px 0 0 5%; font-size: 13px; }
+.listBoxDiv ul li span { width: 20px; height: 20px; line-height: 20px; background: #fff; margin-right: 10px; border-radius: 50px; color: #4d56a3; text-align: center;float: left;}
+.listBoxDiv ul li p{ color: #fff; font-size: 13px;display: block;line-height: 20px;padding-left: 30px;}
+.nrPicimg { width: 90%; margin: auto; }
+.nrPicimg img { width: 100%; }
+/* searchBox */
+.searchBox { width: 100%; margin: 5% auto; }
+.searchBox .searchUl { width: 100%; display: block; }
+.searchBox .searchUl li { display: block; width: 100%; padding-bottom: 8%; }
+.searchBox .searchUl li.dwBoxDiv{ position:relative;}
+.searchBox .searchUl li.dwBoxDiv input.inputBoxDiv1{ opacity:0; position:absolute;bottom: 0px;width: 100%;left: 0px;height: 75px; display:none;}
+.searchBox .searchUl li span { width: 28%; text-align: right; display: block; float: left; padding-right: 3%; font-size: 15px; color: #fff; line-height: 30px; }
+.searchBox .searchUl li input { width: 62%;line-height: 35px; border-radius: 8px; border: 0; background: #fff; padding-left: 10px; color: #909090; font-size: 15px;}
+.searchBox .searchUl li input:focus { color: #333; border: 0; border-radius: 8px; }
+.searchBox .searchUl li p { width: 91%; display: block;text-align: right; padding: 2% 0% 0 0; font-size: 12px; color: #fff;}
+.searchBox .searchUl li p.appAndBox{ width: 100%; position: absolute; bottom: -20px; text-align:left; font-size:12px; display:block;}
+/* 上传图片 */
+.searchBox .searchUl li .imgbox { display: block; position: relative;width: 55%; float: left;min-height: 40%;}
+.searchBox .searchUl li .imgbox .btn-file { position: absolute;top: 3%;z-index: 99;}
+.searchBox .searchUl li .imgbox .btn-file img { width: 100%; display: block; }
+.searchBox .searchUl li .imgbox ul .pList { display: block; width: 100%; padding-bottom: 15%; }
+.searchBox .searchUl li .imgbox ul .pList img { padding-top: 5%;width: 60%; display: block;margin: auto;}
+.searchBox .searchUl li input.inputBoxDiv{ width:90%; margin:auto; display:block; background:#fc8e1b; color:#fff; font-size:20px; border-radius:50px; box-shadow:0px 4px 0px #ba7023; cursor:pointer;line-height: 40px; -webkit-appearance: none;}
+.searchBox .searchUl li input.inputBoxDiv:focus{ color:#fff; border:0px;}
+.searchBox .searchUl li .imgbox #imageBoxz{ height:220px;}
+.searchBox .searchUl li .imgbox #imageBoxz li{ height:220px;}
+/* appAndBox */

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<title>呼朋唤友来砍价</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="呼朋唤友来砍价"/>
+<meta name="description" content="流量咪一个既能蹭网，又能赚流量的工具"/>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/cj.css">
+<script src="js/jquery.js"></script>
+<script src="js/list.js"></script>
+<!-- 清除页面缓存 -->
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">  
+<!-- 清除页面缓存 -->
+</head>
+
+<body>
+<!-- 遮罩 -->
+<div class="msg-mask" id="mask"></div>
+<div class="msg-mask1" id="mask1"></div>
+<!-- 弹窗 -->
+<div id="msg-box" class="msg-box msg-box-confirm">
+	<div class="msg-header"><span class="msg-title"><strong>温馨提示</strong></span><span class="btn btn-close" id="close"><i class="icon icon-close"></i></span></div>
+	<div class="content">
+		<div class="msg">
+			<p></p>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<!-- 内容 -->
+	<div class="bodyWrap">
+        <!-- 蹭网步骤 -->
+        <div class="boxWrapN">
+			<!-- 活动banner -->
+			<div class="banner"><img src="images/indexBanner.jpg" alt="呼朋唤友来砍价"></div>
+			<!--  活动介绍+入口 -->
+			<div class="listBoxMore color2 border1">
+				<div class="listBoxWrap">
+					<p>已有<span class="color1" id="sum">0</span>位亲友帮砍价了，<br>
+当前价格<span class="color1" id="end_price">888</span>元</p>
+				</div>
+			</div>
+			<div class="listBoxMore color2 marginTop10px marginBot10px">
+				<div class="bgBorder"><img src="images/ultop.jpg" alt="砍价列表"></div>
+				<ul class="listBoxMoreUlBoxTitle">
+					<li>亲友</li>
+					<li>砍掉价格</li>
+					<li>砍后价格</li>
+					<div class="clear"></div>
+				</ul>
+				<ul id="coinlist" class="listBoxMoreUlBox"></ul>
+				<ul class="listBoxMoreUlBox" id="listBoxMoreUlBox">
+				</ul>
+			</div>	
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+</html>
