@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>demo</title>
+<script type="text/javascript" src="js/drag.js"></script>
+<script type="text/javascript" src="js/uploadImg.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<style>
+*{
+padding: 0px;
+margin: 0px;
+list-style-type: none;
+}
+body{
+	margin-top: 50px;
+}
+.warp{
+	width: 800px;
+	float: left;
+}
+.bg{
+	width: 317px;
+	height: 629px;
+	background: url('img/timg.png') no-repeat;
+	background-position: 0 0;
+	margin-left:250px;
+	position: relative;
+}
+.bg img{
+	width: 300px;
+	display: block;
+}
+.btn{
+	float: left;
+}
+.btn>input,.btn>label,.imgBtn{
+	width: 100px;
+	height: 50px;
+	font-size: 16px;
+	display: block;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.font{
+	display: inline-block;
+	padding: 5px;
+	position: absolute;
+}
+.imgBtn{
+	border: 1px solid #aaa;
+	line-height: 50px;
+}
+.close{
+	position: absolute;
+	z-index: 99;
+	background: #fff;
+	color: #333;
+	top: 0px;
+	right: 0px;
+}
+.sizeBox{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 30px;
+	height:30px;
+	background: red;
+	z-index: 99;
+	cursor: se-resize;
+}
+.pList{
+	position: absolute;
+
+}
+.pList img{
+	width: 100%;
+}
+
+</style>
+<script>
+$(function(){
+	var num = 0;
+	// color
+	$('.btn').on('click',".colorBox",function(){
+		var dataValue = $(this).attr('data-value');
+		if(dataValue == 0){
+			$('.bg').css({'background-position':'-341px'});
+		}else if(dataValue == 1){
+			$('.bg').css({'background-position':'0'});
+		}
+	})
+	// font
+	$('.btn').on('click','.fontBox',function(){
+		var str = '',
+			fontId = 'fontId'+num;
+		str +=
+			'<div contenteditable="true" class="font" id="'+fontId+'">'+
+				'编辑文字'+
+			'</div>';
+		$('.bg').append(str);
+		num++;
+	});
+	// 拖拽文字
+	$('.bg').on('mousedown','.font',function(){
+		var classId = $(this).attr('id');
+		var fontFn = new Drag(classId);
+	});
+	// 拖拽图片
+	$('.bg').on('mousedown','.pList,.sizeBox',function(ev){
+		$(this).css({"box-shadow":"0 0 3px #000"})
+		if($(this).attr('class')=='pList'){
+			var _this = $(this);
+	        var disX = ev.clientX-$(this).offset().left;
+	        var disY = ev.clientY-$(this).offset().top;
+	        function fnMove(ev){
+	            _this.css({left:ev.clientX-disX-250,top:ev.clientY-disY-50});
+	        }
+	        function fnUp(){
+	            $(document).off('mousemove',fnMove);
+	            $(document).off('mouseup',fnUp);
+	        }
+	        $(document).on('mousemove',fnMove);
+	        $(document).on('mouseup',fnUp);
+	        return false;
+		}else if($(this).attr('class')=='sizeBox'){
+			var _this = $(this).parent();
+	        function fnMove(ev){
+	            _this.css({width:ev.clientX-250});
+	        }
+	        function fnUp(){
+	            $(document).off('mousemove',fnMove);
+	            $(document).off('mouseup',fnUp);
+	        }
+	        $(document).on('mousemove',fnMove);
+	        $(document).on('mouseup',fnUp);
+	        return false;
+		}
+	});
+	// 图片删除按钮
+	$("#bg").on('mouseover', 'li', function(){
+		$(".close").hide();
+		$(this).children(".close").show();
+	});
+	$("#bg").on('click', 'p', function(){
+		$(this).parent().remove();
+	});
+});
+
+</script>
+</head>
+<body>
+<div class="warp">
+	<div class="bg" id="bg">
+	
+	</div>
+</div>
+<div class="btn">
+	<span>颜色</span>
+	<input type="button" value="白" class="colorBox" data-value="0">
+	<input type="button" value="金" class="colorBox" data-value="1">
+	<span>文字</span>
+	<input type="button" value="文字" class="fontBox">
+	<span>图片</span>
+	<label class="btn-file" class="imgBox" data-role="add">
+		<div class="imgBtn">图片</div>
+		<input style="display:none;" class="fileImgBox" type="file" id="filesInput" accept="image/*" >
+	</label>
+</div>
+</body>
+</html>
