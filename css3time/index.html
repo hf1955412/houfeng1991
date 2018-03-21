@@ -16,6 +16,7 @@ body{
 .timeBox{
 	width: 300px;
 	margin: 200px auto;
+	animation: body .2s infinite;
 }
 /* 表头 */
 .title-box{
@@ -41,20 +42,21 @@ body{
 }
 .title-box-lingdang-box{
 	width: 150px;
-	height: 80px;
-	background: #e86f4c;
-	border-top-left-radius: 50px;
-	border-top-right-radius: 50px;
-	position: absolute;
-	top: 0px;
+    height: 80px;
+    background: #e86f4c;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: absolute;
+    top: -12px;
+    transform-origin: center 140px;
 }
 .title-box-lingdang-box.lingdang-left{
-	left: -110px;
-	transform: rotate(-30deg);
+	left: -52px;
+    animation:lingdangl 0.2s infinite;
 }
 .title-box-lingdang-box.lingdang-right{
-	left: 110px;
-	transform: rotate(30deg);
+	left: 52px;
+    animation:lingdangr 0.2s infinite;
 }
 .title-box-lingdang-box-bottom{
 	width: 15px;
@@ -69,6 +71,9 @@ body{
 	bottom: -38px;
 	left: 122px;
 	z-index: 2;
+    transform-origin: center 100px;
+    animation:chuizi 0.1s infinite;
+
 }
 .title-box-chuizi-heng{
 	width: 60px;
@@ -195,7 +200,7 @@ body{
 	width: 5px;
 	height: 100px;
 	background:#333;
-	transform: rotate(200deg);
+	animation: contents 60s infinite;
 }
 .content-box-time-bg{
 	top: 35%;
@@ -227,6 +232,32 @@ body{
 	right: 40px;
 	transform: rotate(-30deg);
 
+}
+@keyframes contents{
+	0%   {transform: rotate(0deg);}
+	100%   {transform: rotate(360deg);}
+}
+@keyframes body{
+	0%   {transform: rotate(0deg);}
+	25%   {transform: rotate(-2deg);}
+	50%   {transform: rotate(0deg);}
+	75%   {transform: rotate(2deg);}
+	100%   {transform: rotate(0deg);}
+}
+@keyframes lingdangl{
+	0%   {transform: rotate(-30deg);}
+	50%   {transform: rotate(-45deg);}
+	100%   {transform: rotate(-30deg);}
+}
+@keyframes lingdangr{
+	0%   {transform: rotate(30deg);}
+	50%   {transform: rotate(45deg);}
+	100%   {transform: rotate(30deg);}
+}
+@keyframes chuizi{
+	0%   {transform: rotate(10deg);}
+	50%   {transform: rotate(-10deg);}
+	100%   {transform: rotate(10deg);}
 }
 </style>
 </head>
