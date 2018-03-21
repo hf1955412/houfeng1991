@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>demo</title>
+<style>
+*{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: aqua;
+}
+.timeBox{
+	width: 300px;
+	margin: 200px auto;
+}
+/* 表头 */
+.title-box{
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+.title-box-bg{
+	width: 170px;
+	height: 170px;
+	border: 15px solid #989898;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+	top: 67px;
+	left: 48px;
+}
+.title-box-lingdang{
+	position: relative;
+	top: 130px;
+	left: 75px;
+	z-index: 2;
+}
+.title-box-lingdang-box{
+	width: 150px;
+	height: 80px;
+	background: #e86f4c;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	position: absolute;
+	top: 0px;
+}
+.title-box-lingdang-box.lingdang-left{
+	left: -110px;
+	transform: rotate(-30deg);
+}
+.title-box-lingdang-box.lingdang-right{
+	left: 110px;
+	transform: rotate(30deg);
+}
+.title-box-lingdang-box-bottom{
+	width: 15px;
+	height: 30px;
+	background: #989898;
+	position: absolute;
+	bottom: -29px;
+	left: 66px;
+}
+.title-box-chuizi{
+	position: absolute;
+	bottom: -38px;
+	left: 122px;
+	z-index: 2;
+}
+.title-box-chuizi-heng{
+	width: 60px;
+	height: 15px;
+	background: #e86f4c;
+	border-radius: 50px; 
+}
+.title-box-chuizi-shu{
+	width: 15px;
+	height: 80px;
+	margin: 0 auto;
+	background: #e86f4c;
+}
+/* 表身 */
+.content-wrap{
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+.content-box{
+	width: 240px;
+	height: 240px;
+	border-radius: 50%;
+	border: 30px solid #e86f4c;
+	overflow: hidden;
+	position: absolute;
+	z-index: 10;
+}
+.content-box-bg{
+	background: #fff;
+	width: 100%;
+	height: 100%;
+}
+.content-box-list{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding-left: 120px;
+}
+.content-box-list li{
+	width: 6px;
+	height: 20px;
+	position: absolute;
+	top: 0px;
+	transform-origin: 0px 120px;
+	background: #989898;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content-box-list li:nth-child(1){
+	transform: rotate(30deg);
+}
+.content-box-list li:nth-child(2){
+	transform: rotate(60deg);
+}
+.content-box-list li:nth-child(3){
+	transform: rotate(90deg);
+}
+.content-box-list li:nth-child(4){
+	transform: rotate(120deg);
+}
+.content-box-list li:nth-child(5){
+	transform: rotate(150deg);
+}
+.content-box-list li:nth-child(6){
+	transform: rotate(180deg);
+}
+.content-box-list li:nth-child(7){
+	transform: rotate(210deg);
+}
+.content-box-list li:nth-child(8){
+	transform: rotate(240deg);
+}
+.content-box-list li:nth-child(9){
+	transform: rotate(270deg);
+}
+.content-box-list li:nth-child(10){
+	transform: rotate(300deg);
+}
+.content-box-list li:nth-child(11){
+	transform: rotate(330deg);
+}
+.content-box-list li:nth-child(12){
+	transform: rotate(360deg);
+}
+.content-box-list li:nth-child(3n){
+	height: 40px;
+}
+
+.content-box-time{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+
+}
+.content-box-time>div{
+	position: absolute;
+	transform-origin: 5px 5px;
+}
+.content-box-time-H{
+	top: 46%;
+    left: 44%;
+	width: 10px;
+	height: 70px;
+	background: yellow;
+	transform: rotate(40deg);
+}
+.content-box-time-M{
+	top: 46%;
+    left: 44%;
+	width: 10px;
+	height: 100px;
+	background: yellow;
+	transform: rotate(90deg);
+}
+.content-box-time-S{
+	top: 46%;
+    left: 44%;
+	width: 5px;
+	height: 100px;
+	background:#333;
+	transform: rotate(200deg);
+}
+.content-box-time-bg{
+	top: 35%;
+	left: 35%;
+	width: 30px;
+	height: 30px;
+	background: #e86f4c;
+	border-radius: 50px;
+}
+
+/* 表脚 */
+.footer-box{
+	position: relative;
+}
+.footer-box>div{
+	width: 20px;
+	height: 80px;
+	border-radius: 10px;
+	background: #989898;
+	position: absolute;
+	bottom: -40px;
+}
+.footer-box-left{
+	left: 40px;
+	transform: rotate(30deg);
+	
+}
+.footer-box-right{
+	right: 40px;
+	transform: rotate(-30deg);
+
+}
+</style>
+</head>
+<body>
+	<div class="timeBox">
+		<div class="title-box">
+			<div class="title-box-bg"></div>
+			<div class="title-box-lingdang">
+				<div class="title-box-lingdang-box lingdang-left">
+					<div class="title-box-lingdang-box-bottom"></div>
+				</div>
+				<div class="title-box-lingdang-box lingdang-right">
+					<div class="title-box-lingdang-box-bottom"></div>
+				</div>
+			</div>
+			<div class="title-box-chuizi">
+				<div class="title-box-chuizi-heng"></div>
+				<div class="title-box-chuizi-shu"></div>
+			</div>
+		</div>
+		<div class="content-wrap">
+			<div class="content-box">
+				<div class="content-box-bg">
+					<ul class="content-box-list">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="content-box-time">
+						<div class="content-box-time-H"></div>
+						<div class="content-box-time-M"></div>
+						<div class="content-box-time-S"></div>
+						<div class="content-box-time-bg"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-box">
+			<div class="footer-box-left"></div>
+			<div class="footer-box-right"></div>
+		</div>
+	</div>
+</body>
+</html>
