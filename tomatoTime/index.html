@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
+*{
+    margin: 0;
+    font-family: Open Sans, Arial;
+}
+html, body, main {
+    height: 100%;
+    overflow: hidden;
+    background-color: #333333;
+}
+h1{
+    display: block;
+    background-color: #333333;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-family: 'Pacifico';
+    font-size: 5em;
+}
+header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px;
+}
+header .session {
+    font-size: .8em;
+    display: flex;
+}
+header .session .breakCtrl, header .session .sessionCtrl {
+    display: inline;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+header .session .minus, header .session .plus {
+    background-color: #333333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    outline: none;
+}
+header .session .time {
+    font-size: 2.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+section {
+    background-color: #333333;
+    height: 100%;
+    color: #fff;
+}
+section .timer {
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    font-size: 4em;
+    border: 2px solid #99CC00;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+}
+section .timer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: 2;
+    border: 4px solid #333333;
+}
+section .title {
+    text-align: center;
+    line-height: 160px;
+    font-size: .8em;
+}
+section .fill {
+    content: '';
+    position: absolute;
+    background: #99CC00;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+</style>
+<script>
+var myApp = angular.module("myApp",[]);
+myApp.controller("myTime",["$scope","$interval","$timeout",function($scope,$interval,$timeout){
+    $scope.breakTime = 5;                       //设置休息时间
+    $scope.sessionTime = 25;                    //设置工作时间
+    $scope.breakPlay = $scope.breakTime;        //休息时间倒计时
+    $scope.sessionPlay = $scope.sessionTime;    //工作时间倒计时
+    $scope.titleTxt = "Session";                //展示文字
+    $scope.timeTxt = $scope.sessionTime;        //展示时间
+
+    var bak = false,                            //开关
+        t = 60*$scope.sessionPlay,              //计时器
+        num = 0,
+        colorBg="",
+        titleTxts ="Session";
+
+    function toDou(n){
+        return n<10?"0"+n:""+n;
+    }
+
+    function timeG(t){
+        d = parseInt(t);
+        var h = parseInt(d/3600),
+            m = parseInt(d%3600/60);
+            s = parseInt(d%3600%60);
+        return toDou(h)+":"+toDou(m)+":"+toDou(s); 
+    }
+
+    $scope.btnType = function(btn,i){
+        i = Number(i);
+        if(!bak){
+            if(btn == "break"){
+                $scope.breakTime += i;
+                if($scope.breakTime<1){
+                    $scope.breakTime = 1;
+                }
+                $scope.breakPlay = $scope.breakTime;
+            }else{
+                $scope.sessionTime += i;
+                if($scope.sessionTime<1){
+                    $scope.sessionTime = 1;
+                }
+                $scope.sessionPlay = $scope.sessionTime;
+            };
+            if($scope.titleTxt == "Break!"){
+                $scope.timeTxt = $scope.breakPlay;
+                t = 60*$scope.breakPlay;
+            }else{
+                $scope.timeTxt = $scope.sessionPlay;
+                t = 60*$scope.sessionPlay;
+            }
+        }
+        
+    };
+
+    $scope.toggleTimer=function(){
+        if(!bak){
+            timeOut();
+            bak = $interval(timeOut,1000);
+        }else{
+            $interval.cancel(bak);
+            bak = false;
+        }
+             
+    }; 
+
+    function timeOut(){
+        t--;
+        console.log(t);
+        if(t<0){
+            if($scope.titleTxt == "Session"){
+                t = 60*$scope.breakPlay;
+                titleTxts = "Break!"
+            }else{
+                t = 60*$scope.sessionPlay;
+                titleTxts = "Session";
+            }
+        }
+        if($scope.titleTxt == "Session"){
+            num = 100-t/(60*$scope.sessionPlay)*100;
+            colorBg = '#99CC00';
+        }else{
+            num = 100-t/(60*$scope.breakPlay)*100;
+            colorBg = '#FF4444';
+        };
+        
+        $scope.timeTxt = timeG(t);
+        $scope.titleTxt = titleTxts;
+        $scope.height = num+"%";
+        $scope.bgColor = colorBg;
+    }
+
+
+
+}]);
+</script>
+</head>
+
+<body>
+
+<h1>FreeCodeCamp</h1>
+<main ng-app="myApp" ng-controller="myTime">
+  <header>
+    <div class="session">
+      <div class="breakCtrl">
+        <p>break length</p>
+        <button class="minus" ng-click="btnType('break','-1')">-</button><span class="time ng-binding">{{breakTime}}</span>
+        <button class="plus" ng-click="btnType('break','1')">+</button>
+      </div>
+      <div class="sessionCtrl">
+        <p>session length</p>
+        <button class="minus" ng-click="btnType('session','-1')">-</button><span class="time ng-binding">{{sessionTime}}</span>
+        <button class="plus" ng-click="btnType('session','1')">+</button>
+      </div>
+    </div>
+  </header>
+  <section ng-click="toggleTimer()">
+    <div class="timer">
+      <p class="title ng-binding">{{titleTxt}}</p>
+      <p class="ng-binding">{{timeTxt}}</p><span class="fill" ng-style="{'height':height,'background':bgColor}"></span>
+    </div>
+  </section>
+</main>
+</body>
+</html>
